@@ -6,7 +6,6 @@ import androidx.navigation.NavHostController
 import com.example.firebasestorage.navigation.ROUT_HOME
 import com.example.firebasestorage.navigation.ROUT_LOGIN
 import com.example.firebasestorage.navigation.ROUT_SIGNUP
-import com.example.firebasestorage.navigation.ROUT_UPLOAD
 import com.google.firebase.auth.FirebaseAuth
 
 class AuthViewModel(var navController:NavHostController, var context:Context) {

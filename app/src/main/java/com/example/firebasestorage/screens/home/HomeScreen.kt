@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.material.Button
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Text
@@ -23,7 +24,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.firebasestorage.InsertActivity
 import com.example.firebasestorage.LocationActivity
+import com.example.firebasestorage.navigation.ROUT_CONTACT
 import com.example.firebasestorage.navigation.ROUT_LOGIN
 import com.example.firebasestorage.navigation.ROUT_SIGNUP
 
@@ -60,6 +63,23 @@ fun HomeScreen(navController:NavHostController) {
             },
             backgroundColor = Color.Green)
         Spacer(modifier = Modifier.height(20.dp))
+
+        Button(onClick = {
+            navController.navigate(ROUT_CONTACT)
+        }) {
+            Text(text = "Contact")
+        }
+
+
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Button(onClick = {
+            mContext.startActivity(Intent(mContext,InsertActivity::class.java))
+        }) {
+            Text(text = "Courses Page")
+        }
+
+
 
     }
 
