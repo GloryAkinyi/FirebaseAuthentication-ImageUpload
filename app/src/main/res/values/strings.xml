@@ -6,4 +6,6 @@
     <string name="title_activity_insert">InsertActivity</string>
     <string name="title_activity_details">DetailsActivity</string>
     <string name="title_activity_update_details">UpdateDetailsActivity</string>
+    <string name="title_activity_product">ProductActivity</string>
+    <string name="title_activity_download">DownloadActivity</string>
 </resources>

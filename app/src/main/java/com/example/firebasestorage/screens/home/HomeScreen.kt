@@ -26,6 +26,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.firebasestorage.InsertActivity
 import com.example.firebasestorage.LocationActivity
+import com.example.firebasestorage.navigation.HOME_URL
 import com.example.firebasestorage.navigation.ROUT_CONTACT
 import com.example.firebasestorage.navigation.ROUT_LOGIN
 import com.example.firebasestorage.navigation.ROUT_SIGNUP
@@ -74,7 +75,7 @@ fun HomeScreen(navController:NavHostController) {
         Spacer(modifier = Modifier.height(20.dp))
 
         Button(onClick = {
-            mContext.startActivity(Intent(mContext,InsertActivity::class.java))
+            navController.navigate(HOME_URL)
         }) {
             Text(text = "Courses Page")
         }

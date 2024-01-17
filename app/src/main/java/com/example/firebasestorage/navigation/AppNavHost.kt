@@ -8,7 +8,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.firebasestorage.screens.contact.ContactScreen
 import com.example.firebasestorage.screens.home.HomeScreen
+import com.example.firebasestorage.screens.home.MyHomeScreen
 import com.example.firebasestorage.screens.login.LoginScreen
+import com.example.firebasestorage.screens.products.AddProductsScreen
+import com.example.firebasestorage.screens.products.ViewProductsScreen
 import com.example.firebasestorage.screens.signup.SignupScreen
 
 
@@ -33,6 +36,15 @@ fun AppNavHost(modifier: Modifier = Modifier, navController:NavHostController = 
 
         composable(ROUT_UPLOAD){
             ContactScreen(navController)
+        }
+        composable(ADD_PRODUCTS_URL){
+            AddProductsScreen(navController = navController)
+        }
+        composable(VIEW_PRODUCTS_URL){
+            ViewProductsScreen(navController = navController)
+        }
+        composable(HOME_URL){
+            MyHomeScreen(navController = navController)
         }
 
 
